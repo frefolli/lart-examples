@@ -1,0 +1,5 @@
+typedef i64 = integer<64, true>;
+fn add2(x: i64, y: i64) -> i64;
+fn main() {
+  add2(0, 1, 2);
+}

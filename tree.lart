@@ -43,12 +43,14 @@ fn delete_tree(tree: &Tree) {
 fn main() {
   let tree: &Tree = new_tree(
     new_node(
-      new_node(nullptr, nullptr),
-      new_node(nullptr, nullptr)
-    ),
-    new_node(
-      new_node(nullptr, nullptr),
-      new_node(nullptr, nullptr)
+      new_node(
+        new_node(nullptr, nullptr),
+        new_node(nullptr, nullptr)
+        ),
+      new_node(
+        new_node(nullptr, nullptr),
+        new_node(nullptr, nullptr)
+        )
     )
   );
   delete_tree(tree);

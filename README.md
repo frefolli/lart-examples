@@ -8,4 +8,5 @@
 | [bad-syntax.lart](bad-syntax.lart) | example of wrong syntax to be used for debugging of `lartc` |
 | [bad-name-resolution.lart](bad-name-resolution.lart) | example of wrong name resolution to be used for debugging of `lartc` |
 | [bad-type-checking.lart](bad-type-checking.lart) | example of wrong type checking to be used for debugging of `lartc` |
+| [bad-decl-type-checking.lart](bad-decl-type-checking.lart) | example of wrong decl type checking to be used for debugging of `lartc` |
 | [tree.lart](tree.lart) | Tree data structure implementation in LART |

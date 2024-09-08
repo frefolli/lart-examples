@@ -44,32 +44,32 @@ mod turing {
       let a: bool = *(tape->cells + i - 1);
       let b: bool = *(tape->cells + i);
       let c: bool = *(tape->cells + i + 1);
-      if (a == 0) {
-        if (b == 0) {
-          if (c == 0) {
-            *(tape->buffer + i) = 0;
+      if (a == false) {
+        if (b == false) {
+          if (c == false) {
+            *(tape->buffer + i) = false;
           } else {
-            *(tape->buffer + i) = 1;
+            *(tape->buffer + i) = true;
           }
         } else {
-          if (c == 0) {
-            *(tape->buffer + i) = 1;
+          if (c == false) {
+            *(tape->buffer + i) = true;
           } else {
-            *(tape->buffer + i) = 1;
+            *(tape->buffer + i) = true;
           }
         }
       } else {
-        if (b == 0) {
-          if (c == 0) {
-            *(tape->buffer + i) = 0;
+        if (b == false) {
+          if (c == false) {
+            *(tape->buffer + i) = false;
           } else {
-            *(tape->buffer + i) = 1;
+            *(tape->buffer + i) = true;
           }
         } else {
-          if (c == 0) {
-            *(tape->buffer + i) = 1;
+          if (c == false) {
+            *(tape->buffer + i) = true;
           } else {
-            *(tape->buffer + i) = 0;
+            *(tape->buffer + i) = false;
           }
         }
       }

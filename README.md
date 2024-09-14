@@ -10,3 +10,4 @@
 | [bad-type-checking.lart](bad-type-checking.lart) | example of wrong type checking to be used for debugging of `lartc` |
 | [bad-decl-type-checking.lart](bad-decl-type-checking.lart) | example of wrong decl type checking to be used for debugging of `lartc` |
 | [tree.lart](tree.lart) | Tree data structure implementation in LART |
+| [chatgpt.lart](chatgpt.lart) | Rule 110 implementation produced by ChatGPT with `tree.lart` as input of example lart language |

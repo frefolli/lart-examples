@@ -97,8 +97,8 @@ mod turing {
       }
     }
     // copy back the buffer into length
-    for (let j: u64 = 0; j < length; j = j + 1) {
-      *(tape->cells + j) = *(tape->buffer + j);
+    for (let i: u64 = 0; i < length; i = i + 1) {
+      *(tape->cells + i) = *(tape->buffer + i);
     }
   }
 

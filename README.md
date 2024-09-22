@@ -17,3 +17,4 @@
 | [include-files.lart](include-files.lart) | Includes [types.lart](types.lart) and [stdlib.lart](stdlib.lart) |
 | [stdlib.lart](stdlib.lart) | Declares some LibC functions |
 | [types.lart](types.lart) | Declares some types |
+| [strucs.lart](strucs.lart) | Uses some structs |

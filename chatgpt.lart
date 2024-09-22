@@ -114,7 +114,7 @@ fn main() {
 
   let cells: &Cells = new_cells(size);  // Create the initial array of cells
   let initial_ptr: &u8 = cells->data + 10;  // Center of the array
-  *initial_ptr = false;  // Set the initial state with a single 1 in the middle
+  *initial_ptr = true;  // Set the initial state with a single 1 in the middle
 
   print_str("Initial State:\n");
   print_cells(cells);

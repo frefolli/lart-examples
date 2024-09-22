@@ -5,9 +5,9 @@ fn malloc(size: u64) -> &void;
 fn free(ptr: &void);
 
 // Placeholder for a print function (replace with an actual implementation)
-fn print_str(s: &u8);
-fn print_char(c: u8);
-fn print_num(n: u64);
+fn put_str(s: &u8);
+fn put_char(c: u8);
+fn put_num(n: u64);
 
 // Structure to represent the cells
 typedef Cells = struct {
@@ -96,15 +96,15 @@ fn print_cells(cells: &Cells) {
 
   while (i < cells->size) {
     if (*ptr == 1) {
-      print_char('1');
+      put_char('1');
     } else {
-      print_char('0');
+      put_char('0');
     }
 
     ptr = ptr + 1;  // Move to the next cell
     i = i + 1;
   }
-  print_char('\n');
+  put_char('\n');
 }
 
 // Main function to simulate Rule 110
@@ -116,15 +116,15 @@ fn main() {
   let initial_ptr: &u8 = cells->data + 10;  // Center of the array
   *initial_ptr = true;  // Set the initial state with a single 1 in the middle
 
-  print_str("Initial State:\n");
+  put_str("Initial State:\n");
   print_cells(cells);
 
   let gen: u64 = 0;
   while (gen < generations) {
     let next_gen: &Cells = apply_rule_110(cells);  // Get the next generation
-    print_str("Generation ");
-    print_num(gen + 1);
-    print_str(":\n");
+    put_str("Generation ");
+    put_num(gen + 1);
+    put_str(":\n");
     print_cells(next_gen);
 
     delete_cells(cells);  // Free the old generation

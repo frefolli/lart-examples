@@ -18,6 +18,7 @@
 | [stdlib.lart](stdlib.lart) | Declares some LibC functions |
 | [types.lart](types.lart) | Declares some types |
 | [strucs.lart](strucs.lart) | Uses some structs |
+| [strucs-as-rvalue.lart](strucs-as-rvalue.lart) | Uses some structs as rvalue |
 | [capi.c](capi.c) | It's a C-file that shows how bindings can be used from a [LART-file](chatgpt.lart) |
 | [array_access.lart](array_access.lart) | Uses array access instead of dereference+sum |
 

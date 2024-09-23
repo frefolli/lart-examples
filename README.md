@@ -19,6 +19,7 @@
 | [types.lart](types.lart) | Declares some types |
 | [strucs.lart](strucs.lart) | Uses some structs |
 | [capi.c](capi.c) | It's a C-file that shows how bindings can be used from a [LART-file](chatgpt.lart) |
+| [array_access.lart](array_access.lart) | Uses array access instead of dereference+sum |
 
 ## Notes
 

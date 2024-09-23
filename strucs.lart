@@ -7,13 +7,13 @@ typedef string = struct {
   length: u64
 };
 
-fn printf_str(str: &u8, s: &u8);
+fn printf(str: &u8, s: &u8);
 fn strlen(str: &u8) -> u64;
 fn malloc(size: u64) -> &void;
 fn free(ptr: &void);
 
 fn string__print(s: &string) {
-  printf_str("s->data = %s;\n", s->data);
+  printf("s->data = %s;\n", s->data);
 }
 
 fn string__new(str: &u8) -> &string {

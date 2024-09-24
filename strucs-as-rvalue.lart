@@ -19,9 +19,9 @@ fn String__New(str: &u8) -> String {
   return s
 }
 
-fn String__print(s: &String) {
-  if (s->data != nullptr) {
-    printf("%s\n", s->data);
+fn String__print(s: String) {
+  if (s.data != nullptr) {
+    printf("%s\n", s.data);
   } else {
     printf("%s\n", "<empty>");
   }
@@ -35,6 +35,6 @@ fn String__Delete(s: &String) {
 
 fn main() {
   let s: String = String__New("Struct as rvalues");
-  String__print(&s);
+  String__print(s);
   String__Delete(&s);
 }

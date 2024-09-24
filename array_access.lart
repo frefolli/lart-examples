@@ -11,7 +11,7 @@ fn main() {
   arr[1] = 1;
 
   for (let i: u64 = 2; i < length; i = i + 1) {
-    arr[i] = (arr[i - 1]) + (arr[i - 2]);
+    arr[i] = arr[i - 1] + arr[i - 2];
   }
   printf("arr[%lu] = %ld\n", length - 1, arr[length - 1]);
 }

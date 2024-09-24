@@ -26,7 +26,7 @@ typedef FILE = struct {}; // TODO:
 fn exit(code: i64);
 fn strlen(str: &char) -> u64;
 fn puts(str: &char);
-fn aligned_alloc(alignment: u64, size: u64) -> &void;
+fn malloc(size: u64) -> &void;
 fn memcpy(dest: &void, src: &void, count: u64) -> &void;
 fn free(ptr: &void);
 fn fseek(file: &FILE, offset: u64, mode: u64);
@@ -36,15 +36,6 @@ fn ftell(file: &FILE) -> u64;
 fn fread(dst: &char, obj_num: u64, obj_size: u64, file: &FILE);
 fn fwrite(src: &char, obj_num: u64, obj_size: u64, file: &FILE);
 fn printf(fmt: &char, ptr: &void);
-
-fn malloc(size: u64) -> &void {
-  return aligned_alloc(8, size);
-}
-
-fn ts_node_clone(src: &TSNode) -> &TSNode {
-  let dst: &TSNode = malloc(sizeof<TSNode>);
-  return memcpy(dst, src, sizeof<TSNode>);
-}
 
 fn read_source_code(filepath: &char) -> &char {
   let SEEK_SET: u64 = 0;
@@ -80,7 +71,6 @@ fn main(argc: i32, args: &&char) {
     printf("file %s doesn't exist\n", path);
     exit(1);
   }
-
   puts("DEBUG: read source code");
   
   let tree: &TSTree = ts_parser_parse_string(parser, nullptr, source_code, strlen(source_code));

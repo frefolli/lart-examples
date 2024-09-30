@@ -1,0 +1,9 @@
+include "../lart-examples/types.lart";
+
+fn printf(fmt: &char, ...);
+
+fn main() {
+  let x: i32 = 1;
+  let xp: &i32 = &x;
+  printf("x: %d, xp: %p\n", x, xp);
+}

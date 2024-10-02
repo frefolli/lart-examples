@@ -1,0 +1,29 @@
+include "types";
+
+typedef FILE = struct {};
+
+fn printf(fmt: &char, ...);
+fn fscanf(stream: &FILE, fmt: &char, ...) -> i32;
+fn exit(code: i32);
+
+fn assert(exp: bool) {
+  if (exp != true) {
+    printf("Assertion error\n");
+    exit(1);
+  }
+}
+
+mod C {
+  fn stdin() -> &FILE;
+  fn stdout() -> &FILE;
+  fn stderr() -> &FILE;
+}
+
+fn main() {
+  let stdin: &FILE = C::stdin();
+  let x: f64 = 7;
+  x = x + 4;
+  printf("you inserted: %f\n", x);
+  assert(fscanf(stdin, "%f", &x) == 1);
+  printf("you inserted: %f\n", x);
+}

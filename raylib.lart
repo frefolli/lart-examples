@@ -7,7 +7,7 @@ typedef Color = struct {
     a: byte
 };
 
-fn printf(fmt: &char, x: u32);
+fn printf(fmt: &char, ...);
 fn InitWindow(width: u32, height: u32, title: &char);
 fn SetTargetFPS(fps: u32);
 fn WindowShouldClose() -> bool;

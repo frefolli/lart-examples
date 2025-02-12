@@ -26,6 +26,8 @@
 | [variadic.lart](variadic.lart) | Example usage of variadic functions. |
 | [std-streams.c](std-streams.c) | It's a C-file that defines bindings for accessing `stdin, stdout, stderr`. |
 | [streams-and-floats.lart](streams-and-floats.lart) | Example usage of C streams (via [std-streams.c](std-streams.c)) and floats. |
+| [regex.lart](regex.lart) | Example usage of POSIX regex. |
+| [comments.lart](comments.lart) | Example usage of comments. |
 
 ## Notes
 

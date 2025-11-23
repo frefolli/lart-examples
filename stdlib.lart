@@ -1,3 +1,4 @@
 fn puts(str: string) -> void;
 fn malloc(size: u64) -> &void;
 fn free(ptr: &void) -> void;
+fn printf(fmt: string, ...);

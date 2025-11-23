@@ -21,6 +21,7 @@
 | [strucs-as-rvalue.lart](strucs-as-rvalue.lart) | Uses some structs as rvalue |
 | [capi.c](capi.c) | It's a C-file that shows how bindings can be used from a [LART-file](chatgpt.lart) |
 | [array-access.lart](array-access.lart) | Uses array access instead of dereference+sum |
+| [array.lart](array.lart) | Uses arrays as primary types |
 | [function-pointer.lart](function-pointer.lart) | Uses function pointers as first class type |
 | [ts.lart](ts.lart) | Uses Tree Sitter to parse the file itself from LART language as binding, proving that somehow the ABI is working |
 | [variadic.lart](variadic.lart) | Example usage of variadic functions. |
